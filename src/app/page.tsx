@@ -1,113 +1,75 @@
-import Image from "next/image";
+import { Alert } from "flowbite-react";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className="container mx-auto">
+            <Alert className="mt-2" color="success">The website is under development. Therefore, if you see bugs and errors, please let me know</Alert>
+            <div className="my-12 flex justify-between">
+                <div className="w-3/4">
+                    <div className="mb-8">
+                        <h1 className='text-4xl mb-2'>Merekeyev Dias</h1>
+                        <h2 className="text-lg text-gray-700">Front-end Developer</h2>
+                    </div>
+                    <div className="mb-6">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum modi est, vitae rem fuga voluptates explicabo qui hic ab dolore cumque eius laborum ad officiis. Commodi laborum, quam beatae accusantium voluptatum, quidem temporibus, voluptatibus optio molestiae corrupti cum minus blanditiis neque. Sit et harum quo maiores similique repellat suscipit excepturi?</p>
+                        <br />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel veniam nihil reiciendis ut, eveniet inventore quasi nesciunt tenetur ipsa doloribus officia dolor repudiandae assumenda ullam itaque, quo praesentium! Blanditiis sapiente illo aliquam voluptates dicta amet ad non veniam magni tempore?</p>
+                    </div>
+                    <ul className="flex gap-3">
+                        <li><a href="mailto:diasmerekeev1@gmail.com"><img className="w-8" src="img/socials/gmail.png" alt="Linkedin Icon" /></a></li>
+                        <li><a href="https://github.com/dikxarper"><img className="w-8" src="img/socials/github.png" alt="Github Icon" /></a></li>
+                        <li><a href="https://www.linkedin.com/in/dias-merekeev-493a72236/"><img className="w-8" src="img/socials/linkedin.png" alt="Linkedin Icon" /></a></li>
+                        <li><a href="https://t.me/dikxarper"><img className="w-8" src="img/socials/telegram.png" alt="Linkedin Icon" /></a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div className="w-60 h-60 mb-4">
+                        <img className='rounded-full w-full h-full object-cover' src="img/profile.png" alt='Profile picture' />
+                    </div>
+                    <div>
+                        <div className="flex items-end gap-2 mb-2">
+                            <span className="material-symbols-outlined">location_on</span>
+                            <div><span className="text-zinc-800">Astana</span>, Kazakhstan</div>
+                        </div>
+                        <div className="flex items-end gap-2">
+                            <span className="material-symbols-outlined">mail</span>
+                            <p>diasmerekeev1@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <div className="columns-2">
+                <div>
+                    <h1 className="mb-6 text-xl font-semibold text-green-700">Education</h1>
+                    <div className="mb-2 flex items-center gap-8">
+                        <div className="w-24 h-24">
+                            <img className="w-full h-full object-cover" src="img/resume/astana_it_logo.png" alt="Astana IT University Logo" />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-medium">Bachelor of Science in Computer Science</h3>
+                            <div className="text-gray-700">Astana IT University</div>
+                            <div className="text-gray-700">2021 - 2024</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 className="mb-6 text-xl font-semibold text-green-700">Awards</h1>
+                    <div className="mb-2 flex items-center gap-8">
+                        <div className="w-24 h-24">
+                            <img className="w-full h-full object-cover" src="img/resume/astana_it_logo.png" alt="Astana IT University Logo" />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-medium">Bachelor of Science in Computer Science</h3>
+                            <div className="text-gray-700">Astana IT University</div>
+                            <div className="text-gray-700">2021 - 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+        </main>
+    );
 }
