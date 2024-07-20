@@ -1,10 +1,26 @@
-import { Alert } from "flowbite-react";
+import { Badge, Banner, CustomFlowbiteTheme } from "flowbite-react";
+import { HiX } from 'react-icons/hi';
+import { MdAnnouncement } from "react-icons/md";
 
 export default function Home() {
     return (
         <main className="container mx-auto">
-            <Alert className="mt-2" color="success">The website is under development. Therefore, if you see bugs and errors, please let me know</Alert>
-            <div className="my-12 flex justify-between">
+            <Banner>
+                <div className="flex w-full justify-between border-b border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700">
+                    <div className="mx-auto flex items-center">
+                        <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                            <MdAnnouncement className="mr-4 h-4 w-4" />
+                            <span className="[&_p]:inline">
+                                The website is under development. Therefore, if you see bugs and errors, please let me know
+                            </span>
+                        </p>
+                    </div>
+                    <Banner.CollapseButton color="gray" className="border-0 bg-transparent text-gray-500 dark:text-gray-400">
+                        <HiX className="h-4 w-4" />
+                    </Banner.CollapseButton>
+                </div>
+            </Banner>
+            <div className="mt-12 mb-10 flex justify-between">
                 <div className="w-3/4">
                     <div className="mb-8">
                         <h1 className='text-4xl mb-2'>Merekeyev Dias</h1>
@@ -22,54 +38,84 @@ export default function Home() {
                         <li><a href="https://t.me/dikxarper"><img className="w-8" src="img/socials/telegram.png" alt="Linkedin Icon" /></a></li>
                     </ul>
                 </div>
-                
-                <div>
-                    <div className="w-60 h-60 mb-4">
-                        <img className='rounded-full w-full h-full object-cover' src="img/profile.png" alt='Profile picture' />
+
+                <div className="w-72 h-72 mb-4">
+                    <img className='rounded w-full h-full object-cover' src="img/profile.jpg" alt='Profile picture' />
+                </div>
+                {/* <div>
+                    <div className="flex items-end gap-2 mb-2">
+                        <span className="material-symbols-outlined">location_on</span>
+                        <div><span className="text-zinc-800">Astana</span>, Kazakhstan</div>
                     </div>
-                    <div>
-                        <div className="flex items-end gap-2 mb-2">
-                            <span className="material-symbols-outlined">location_on</span>
-                            <div><span className="text-zinc-800">Astana</span>, Kazakhstan</div>
+                    <div className="flex items-end gap-2">
+                        <span className="material-symbols-outlined">mail</span>
+                        <p>diasmerekeev1@gmail.com</p>
+                    </div>
+                </div> */}
+            </div>
+
+            <hr className="h-px my-8 bg-green-800 border-0 dark:bg-gray-700" />
+
+            <div className="grid grid-cols-2 mb-12">
+                <div>
+                    <h1 className="mb-6 text-xl font-semibold text-green-700">Experience</h1>
+                    <div className="mb-2 flex items-center gap-8">
+                        <div className="w-24 h-24">
+                            <img className="w-full h-full object-contain" src="img/resume/arta_logo.jpg" alt="Astana IT University Logo" />
                         </div>
-                        <div className="flex items-end gap-2">
-                            <span className="material-symbols-outlined">mail</span>
-                            <p>diasmerekeev1@gmail.com</p>
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-medium">Web Developer Intern</h3>
+                            <div className="text-gray-700">ARTA Software LLP</div>
+                            <div className="text-gray-700">Jul 2024 - Present</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 className="mb-6 text-xl font-semibold text-green-700">Education</h1>
+                    <div className="mb-2 flex items-center gap-8">
+                        <div className="w-24 h-24">
+                            <img className="w-full h-full object-contain" src="img/resume/astana_it_logo.png" alt="Astana IT University Logo" />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-medium">Bachelor of Science in Computer Science</h3>
+                            <div className="text-gray-700">Astana IT University</div>
+                            <div className="text-gray-700">2021 - 2024</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="columns-2">
-                <div>
-                    <h1 className="mb-6 text-xl font-semibold text-green-700">Education</h1>
-                    <div className="mb-2 flex items-center gap-8">
-                        <div className="w-24 h-24">
-                            <img className="w-full h-full object-cover" src="img/resume/astana_it_logo.png" alt="Astana IT University Logo" />
+            <div className="">
+                <h1 className="mb-6 text-xl font-semibold text-green-700">Awards</h1>
+                <div className="border border-gray-300 p-3 rounded-xl mb-8">
+                    <div className="mb-6 flex items-center gap-8">
+                        <div className="w-24 h-24 flex-shrink-0">
+                            <img className="w-full h-full object-cover rounded-full" src="img/resume/hackathon/gds_logo.webp" alt="Astana IT University Logo" />
                         </div>
                         <div className="flex flex-col gap-1">
-                            <h3 className="font-medium">Bachelor of Science in Computer Science</h3>
-                            <div className="text-gray-700">Astana IT University</div>
-                            <div className="text-gray-700">2021 - 2024</div>
+                            <h3 className="font-medium">Winner of Google Developer Hackathon organized by GDSC AITU</h3>
+                            <div className="text-gray-700"><span className="font-semibold">Task:</span> create a chatbot that generates personalized routes on map to Astana's attractions based on user location, preferences, attraction hours, and travel mode. It also provides information on attractions, including descriptions, significance, hours, ticket prices, addresses, transport routes, and contact details.</div>
+                            <div className="text-gray-700"><span className="font-semibold">Prize:</span> 250 000₸ ( ≈ 500$ )</div>
+                        </div>
+                    </div>
+                    <div className="flex justify-between">
+                        <div className="flex gap-2">
+                            <Badge color="info">Articial Intelligance</Badge>
+                            <Badge color="info">Web Application</Badge>
+                        </div>
+                        <div className="flex items-center justify-end gap-2">
+                            <a className="flex items-center gap-1" href="certificates/gds_certificate.jpg" target="_blank">
+                                [<span className="text-sky-800 hover:text-gray-500">Repository</span>]
+                            </a>
+                            <a className="flex items-center gap-1" href="certificates/gds_certificate.jpg" target="_blank">
+                                [<span className="text-sky-800 hover:text-gray-500">Certificate</span>]
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h1 className="mb-6 text-xl font-semibold text-green-700">Awards</h1>
-                    <div className="mb-2 flex items-center gap-8">
-                        <div className="w-24 h-24">
-                            <img className="w-full h-full object-cover" src="img/resume/astana_it_logo.png" alt="Astana IT University Logo" />
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <h3 className="font-medium">Bachelor of Science in Computer Science</h3>
-                            <div className="text-gray-700">Astana IT University</div>
-                            <div className="text-gray-700">2021 - 2024</div>
-                        </div>
-                    </div>
-                </div>
-            </div>    
 
 
+            </div>
         </main>
     );
 }
