@@ -21,12 +21,12 @@ export default function HeaderPartial() {
                     <img src={logo.src} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
                 </Navbar.Brand>
                 <div className="flex md:order-2">
-                    <Button color="success">Contact me</Button>
+                    <Button color="success" disabled>Contact me</Button>
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
-                    <Navbar.Link href="#" active>Resume</Navbar.Link>
-                    <Navbar.Link href="#">Projects</Navbar.Link>
+                    <Navbar.Link href="/" active>Resume</Navbar.Link>
+                    <Navbar.Link href="/projects">Projects</Navbar.Link>
                 </Navbar.Collapse>
             </Navbar>
         </header>

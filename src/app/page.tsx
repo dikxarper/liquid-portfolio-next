@@ -1,7 +1,14 @@
 import { Banner } from "flowbite-react";
 import { HiX } from 'react-icons/hi';
 import { MdAnnouncement } from "react-icons/md";
+import { Metadata } from "next";
 import Awards from "./components/Awards";
+
+export const metadata: Metadata = {
+    title: "dikxarper",
+    description: "The portfolio of Merekeyev Dias",
+    metadataBase: new URL('localhost:3000')
+}
 
 export default function Home() {
     return (
@@ -34,9 +41,9 @@ export default function Home() {
                     </div>
                     <ul className="flex gap-3">
                         <li><a href="mailto:diasmerekeev1@gmail.com"><img className="w-8" src="img/socials/gmail.png" alt="Linkedin Icon" /></a></li>
-                        <li><a href="https://github.com/dikxarper"><img className="w-8" src="img/socials/github.png" alt="Github Icon" /></a></li>
-                        <li><a href="https://www.linkedin.com/in/dias-merekeev-493a72236/"><img className="w-8" src="img/socials/linkedin.png" alt="Linkedin Icon" /></a></li>
-                        <li><a href="https://t.me/dikxarper"><img className="w-8" src="img/socials/telegram.png" alt="Linkedin Icon" /></a></li>
+                        <li><a href="https://github.com/dikxarper" target="_blank"><img className="w-8" src="img/socials/github.png" alt="Github Icon" /></a></li>
+                        <li><a href="https://www.linkedin.com/in/dias-merekeev-493a72236/" target="_blank"><img className="w-8" src="img/socials/linkedin.png" alt="Linkedin Icon" /></a></li>
+                        <li><a href="https://t.me/dikxarper" target="_blank"><img className="w-8" src="img/socials/telegram.png" alt="Linkedin Icon" /></a></li>
                     </ul>
                 </div>
 
@@ -67,13 +74,13 @@ export default function Home() {
                         <div className="flex flex-col gap-1">
                             <h3 className="font-medium">Web Developer Intern</h3>
                             <div className="text-gray-700">ARTA Software LLP</div>
-                            <div className="text-gray-700">Jul 2024 - Present</div>
+                            <div className="text-gray-700">Jul 2024 - 1 month</div>
                         </div>
                     </div>
                 </div>
                 <div>
                     <h1 className="mb-6 text-xl font-semibold text-green-700">Education</h1>
-                    <div className="mb-2 flex items-center gap-8">
+                    <div className="mb-6 flex items-center gap-8">
                         <div className="w-24 h-24">
                             <img className="w-full h-full object-contain" src="img/resume/astana_it_logo.png" alt="Astana IT University Logo" />
                         </div>
@@ -81,6 +88,16 @@ export default function Home() {
                             <h3 className="font-medium">Bachelor of Science in Computer Science</h3>
                             <div className="text-gray-700">Astana IT University</div>
                             <div className="text-gray-700">2021 - 2024</div>
+                        </div>
+                    </div>
+                    <div className="mb-2 flex items-center gap-8">
+                        <div className="w-24 h-24">
+                            <img className="w-full h-full object-contain" src="img/resume/iitu_logo.png" alt="Astana IT University Logo" />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <h3 className="font-medium">Master of Science in Data Science</h3>
+                            <div className="text-gray-700">International Information Technology University</div>
+                            <div className="text-gray-700">2024 - present</div>
                         </div>
                     </div>
                 </div>
