@@ -1,0 +1,9 @@
+.project-item-img-container {
+    width: 320px;
+    height: 240px;
+}
+
+.project-item-img-container img {
+    width: 100%;
+    height: 100%;
+}
